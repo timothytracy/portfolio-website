@@ -9,6 +9,9 @@ const config: Config = {
   darkMode: 'media',
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Montserrat', 'sans-serif'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -212,6 +215,8 @@ const config: Config = {
           600: 'var(--dracula-orchid-600)',
           700: 'var(--dracula-orchid-700)',
         },
+        'gradient-start': '#3b82f6',
+        'gradient-end': '#8b5cf6',
       },
     },
   },

@@ -1,14 +1,15 @@
 :root {
-    --cube-size: 50px;
-    --cube-gap: 0px;
+    
+    /* OTHER ROTATING CUBE ARRAY VARIABLES FOUND IN globals.css*/
+    --cube-gap: 10px;
     --scene-perspective: 2000px;
-    --scene-width: 600px;
-    --scene-height: 600px;
+    --scene-width: auto;
+    --scene-height: auto;
     --explosion-speed: 4s;
     --color-wave-speed: 5s;
     --flash-speed: 0.5s;
-    --explosion-distance: 800px;
-    --explosion-rotation: 360deg;
+    
+    
     --cube-color: rgba(255, 255, 255, 0.8);
     --cube-border-color: rgba(0, 0, 0, 0.1);
     --hover-color: #ef4149;

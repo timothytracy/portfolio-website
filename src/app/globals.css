@@ -4,7 +4,8 @@
 
 :root {
  
-
+  --gradient-start: #3b82f6,
+  --gradient-end: #8b5cf6,
   /* Greens */
   --light-greenish-blue: #5ce1e6;
   --light-greenish-blue-100: #e0f8f9;
@@ -192,7 +193,20 @@
   --dracula-orchid-700: #070a0a;
 
    --background: var(--city-lights-300);
-  --foreground: var(--dracula-orchid);
+   --foreground: var(--city-lights-300);
+  /* --foreground: var(--dracula-orchid); */
+
+  /* ROTATING CUBE ARRAY VARIABLES*/
+  --cube-size: 30px;
+  --explosion-distance: 200px;
+  --explosion-rotation: 720deg;
+  @screen lg{
+    --cube-size: 70px;
+    --explosion-distance: 800px;
+    --explosion-rotation: 1440deg;
+  }
+  /* ROTATING CUBE ARRAY VARIABLES*/
+  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -206,11 +220,128 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  
+
 }
+
+
+@layer base {
+  h1, h2, h3, h4, h5, h6, p {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  h1 {
+    @apply text-4xl font-extrabold mb-6;
+    /* 36px, extra bold */
+  }
+
+  h2 {
+    @apply text-3xl font-bold mb-5;
+    /* 30px, semi-bold */
+  }
+
+  h3 {
+    @apply text-2xl font-semibold mb-4;
+    /* 24px, medium */
+  }
+
+  h4 {
+    @apply text-xl font-semibold mb-3;
+    /* 20px, medium */
+  }
+
+  h5 {
+    @apply text-lg font-semibold mb-2;
+    /* 18px, medium */
+  }
+
+  h6 {
+    @apply text-base font-semibold mb-2;
+    /* 16px, medium */
+  }
+
+  p{
+    @apply text-base font-semibold;
+  }
+  section{
+    @apply flex;
+  }
+}
+
+/* Optional: Add responsive adjustments */
+@screen md {
+  h1 {
+    @apply text-7xl;
+    /* 48px on medium screens and up */
+  }
+
+  h2 {
+    @apply text-6xl;
+    /* 36px on medium screens and up */
+  }
+  h3 {
+    @apply text-5xl font-medium mb-4;
+    /* 24px, medium */
+  }
+
+  h4 {
+    @apply text-4xl font-medium mb-3;
+    /* 20px, medium */
+  }
+
+  h5 {
+    @apply text-3xl font-medium mb-2;
+    /* 18px, medium */
+  }
+
+  h6 {
+    @apply text-2xl font-medium mb-2;
+    /* 16px, medium */
+  }
+
+  /* ... adjust other headings as needed */
+}
+
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+
+@layer utilities {
+  .font-montserrat-thin {
+    font-weight: 100;
+  }
+  .font-montserrat-extralight {
+    font-weight: 200;
+  }
+  .font-montserrat-light {
+    font-weight: 300;
+  }
+  .font-montserrat-regular {
+    font-weight: 400;
+  }
+  .font-montserrat-medium {
+    font-weight: 500;
+  }
+  .font-montserrat-semibold {
+    font-weight: 600;
+  }
+  .font-montserrat-bold {
+    font-weight: 700;
+  }
+  .font-montserrat-extrabold {
+    font-weight: 800;
+  }
+  .font-montserrat-black {
+    font-weight: 900;
+  }
+}
+
+@screen lg{
+  
+
+}
+
+

@@ -26,13 +26,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=''/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="flex flex-col lg:flex-row h-screen overflow-hidden">
+        <div className="flex flex-col lg:flex-row h-screen overflow-hidden ">
         <Header></Header>
         
-        <main className="flex-grow overflow-auto relative" >
+        <main className="flex-grow overflow-auto relative bg-gradient-to-r from-robins-egg-blue-600 to-electron-blue-500 dark:bg-gradient-to-r dark:from-electron-blue-500 dark:to-exodus-fruit-500">
         {children}
         </main>
         </div>
