@@ -7,20 +7,12 @@ const Header = () => {
     return ( 
         <div className='border border-solid border-orangeville light:bg-city-lights-100 flex  lg:min-h-screen lg:max-w-[100px]  h-16 lg:h-auto justify-center items-center'>
             <div className="flex lg:flex-col space-5">
-                
-                <HeaderButton><FaHome size='30'/></HeaderButton>
-                <HeaderButton><FaPerson size='30'/></HeaderButton>
-                <HeaderButton><MdWork size='30'/></HeaderButton>
-                <HeaderButton><FaTools size='30'/></HeaderButton>
-                <HeaderButton><MdContactMail size='30'/></HeaderButton>
-                <HeaderButton>Helo</HeaderButton>
-               
+                <a href='/home'><HeaderButton ><FaHome size='30'/></HeaderButton></a>
+                <a href='/about'><HeaderButton><FaPerson size='30'/></HeaderButton></a>
+                <a href='/work'><HeaderButton><MdWork size='30'/></HeaderButton></a>
+                <a href='/portfolio'><HeaderButton><FaTools size='30'/></HeaderButton></a>
+                <a href='/contact'><HeaderButton><MdContactMail size='30'/></HeaderButton></a>
             </div>
-
-
-
-
-
         </div>
     );
 }

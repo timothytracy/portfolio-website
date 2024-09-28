@@ -1,3 +1,6 @@
+import ECard from "../components/cards/hover-card/ECard";
+import ReactiveCardOneSide from "../components/cards/hover-card/ReactiveCardOneSide";
+import ReactiveCardTwoSide from "../components/cards/hover-card/ReactiveCardTwoSide";
 
 
 export default function About() {
@@ -14,6 +17,22 @@ export default function About() {
           with the responsive Header component.
         </p>
       </div>
+
+      <ReactiveCardOneSide></ReactiveCardOneSide>
+      <ReactiveCardTwoSide></ReactiveCardTwoSide>
+      <div className="flex">
+      <ECard></ECard>
+      <ECard></ECard>
+      <ECard></ECard>
+      <ECard></ECard>
+      </div>
+      <div className="flex">
+      <ECard></ECard>
+      <ECard></ECard>
+      <ECard></ECard>
+      <ECard></ECard>
+      </div>
+      
       </>
     
    
