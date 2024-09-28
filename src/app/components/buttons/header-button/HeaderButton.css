@@ -1,0 +1,37 @@
+.btn {
+    display: grid;
+    place-items: center;
+    
+    
+    padding: 1.4em;
+    border-radius: 100px;
+    
+    /* box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+            -6px -6px 10px -1px rgba(255,255,255,0.7); */
+    border: 1px solid rgba(0,0,0,0);
+    cursor: pointer;
+    transition: transform 0.5s;
+  }
+
+  .inner {
+    
+    
+  }
+  
+  .btn:hover {
+    
+    
+  }
+  
+  .btn .inner {
+    transition: transform 0.5s;
+  }
+  
+  
+
+  .btn:hover .inner{
+    transform: scale(2);
+  }
+
+  
+  
