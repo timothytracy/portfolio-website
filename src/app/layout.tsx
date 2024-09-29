@@ -37,7 +37,7 @@ export default function RootLayout({
         <div className="flex flex-col lg:flex-row h-screen overflow-hidden ">
         <Header></Header>
         
-        <main className="flex-grow overflow-auto relative bg-gradient-to-r from-robins-egg-blue-600 to-electron-blue-500 dark:bg-gradient-to-r dark:from-electron-blue-500 dark:to-exodus-fruit-500">
+        <main className="flex-grow overflow-auto relative bg-gradient-to-r from-robins-egg-blue-600 to-electron-blue-500 dark:bg-gradient-to-r dark:from-electron-blue-500 dark:to-exodus-fruit-500 p-10">
         {children}
         </main>
         </div>

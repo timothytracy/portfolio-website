@@ -1,6 +1,6 @@
 import ECard from "../components/cards/hover-card/ECard";
 import ReactiveCardOneSide from "../components/cards/hover-card/ReactiveCardOneSide";
-import ReactiveCardTwoSide from "../components/cards/hover-card/ReactiveCardTwoSide";
+
 
 
 export default function Portfolio() {

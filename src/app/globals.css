@@ -264,7 +264,7 @@ body {
     @apply text-base font-semibold;
   }
   section{
-    @apply flex;
+    @apply flex p-5;
   }
 }
 
