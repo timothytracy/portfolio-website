@@ -3,7 +3,7 @@ import HeaderButton from "../buttons/header-button/HeaderButton";
 import { FaPerson } from "react-icons/fa6";
 import { MdContactMail, MdWork } from "react-icons/md";
 
-const Header = () => {
+const Header: React.FC = () => {
     return ( 
         <div className='flex justify-center items-center bg-electron-blue-100  dark:bg-dracula-orchid-500  lg:min-h-screen lg:max-w-[100px]  h-16 lg:h-auto '>
             <div className="flex lg:flex-col space-5">
@@ -18,6 +18,3 @@ const Header = () => {
 }
 
 export default Header;
-<div className='flex flex-column min-h-max bg-white'>
-
-</div>

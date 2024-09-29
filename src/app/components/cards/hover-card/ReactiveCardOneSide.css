@@ -1,27 +1,19 @@
 /* From Uiverse.io by kennyotsu */ 
 /*works janky on mobile :<*/
 .container {
-    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
     transition: 200ms;
-    width: 90%;
-    height: 90%;
     justify-content: center;
     align-items: center;
-    
-    
   }
   
  
   
   #card {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
+  
     
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
     transition: 700ms;
     background: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 46%, rgb(255, 204, 112) 100%);
     overflow: hidden; /* Hide overflow */
@@ -33,7 +25,7 @@
     overflow-x: auto;
     overflow-y: auto;
     
-    margin: 10px;
+    
     box-sizing: border-box;
   }
   
@@ -66,72 +58,9 @@
 
   
   
-  .tracker:hover ~ #card .title {
-    opacity: 1;
-  }
   
-  #prompt {
-    bottom: 8px;
-    left: 12px;
-    z-index: 20;
-    font-size: 20px;
-    font-weight: bold;
-   
-    position: absolute;
-    max-width: 110px;
-    color: rgb(255, 255, 255);
-  }
-  
-  .tracker {
-    position: absolute;
-    z-index: 200;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .tracker:hover {
-    cursor: pointer;
-  }
-  
-  .tracker:hover ~ #card #prompt {
-    opacity: 0;
-  }
+
   
   
-  
-  .container:hover #card::before {
-   
-    content: '';
-    opacity: 80%;
-  }
-  
-  .canvas {
-    perspective: 800px;
-    inset: 0;
-    z-index: 200;
-    position: absolute;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      "tr-1 tr-2 tr-3 tr-4 tr-5"
-      "tr-6 tr-7 tr-8 tr-9 tr-10"
-      "tr-11 tr-12 tr-13 tr-14 tr-15"
-      "tr-16 tr-17 tr-18 tr-19 tr-20"
-      "tr-21 tr-22 tr-23 tr-24 tr-25";
-  }
-  
-  #card::before {
-    content: '';
-    background: linear-gradient(43deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 46%, rgb(255, 204, 112) 100%);
-    filter: blur(2rem);
-    opacity: 30%;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-  
-  }
   
  
