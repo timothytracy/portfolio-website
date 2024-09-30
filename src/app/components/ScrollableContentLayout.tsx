@@ -1,17 +1,16 @@
-interface SafeAreaProps {
+interface ScrollableContentProps {
     children: React.ReactNode;
     className?: string;
 }
-export const SafeAreaLayout: React.FC<SafeAreaProps> = ({ children, className }) => {
+import './../../app/globals.css'
+export const ScrollableContentLayout: React.FC<ScrollableContentProps> = ({ children, className }) => {
     return (
         <div className={
             `
+            noScrollBar 
                 flex 
-                flex-grow 
-                min-h-full 
+                h-full
                 w-full
-                h-auto
-                p-5
                 ${className || ''}
             `
         }

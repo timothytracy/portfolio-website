@@ -79,7 +79,7 @@ export default function About() {
             
             <div className="flex flex-wrap justify-center">
                 {cardData.map((card, index) => (
-                    <div key={index} className="w-[500px] h-[600px] border border-solid border-red">
+                    <div key={index} className="">
                         <ExperienceCard title={card.title} className="h-full">
                             {card.items.map((item, itemIndex) => (
                                 <TimeProgressBar 

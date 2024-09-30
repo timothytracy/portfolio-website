@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/header/Header";
+import { SafeAreaLayout } from "./components/SafeAreaLayout";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,23 +33,21 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-clip`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="
           flex 
           flex-col 
           lg:flex-row 
-          flex-grow 
-          h-full 
+          min-h-full 
+          overflow-clip 
          ">
           <Header></Header>
 
           <main className=" 
-            flex
-            flex-grow 
-            overflow-auto 
+            flex 
             w-full 
-            min-h-full 
+            h-auto 
             bg-gradient-to-r 
             from-robins-egg-blue-600 
             to-electron-blue-500 
@@ -56,7 +55,9 @@ export default function RootLayout({
             dark:from-electron-blue-500 
             dark:to-exodus-fruit-500 
             ">
-            {children}
+              <SafeAreaLayout>
+              {children}
+              </SafeAreaLayout>
           </main>
         </div>
 

@@ -1,17 +1,18 @@
-interface SafeAreaProps {
+interface CardGroupProps {
     children: React.ReactNode;
     className?: string;
 }
-export const SafeAreaLayout: React.FC<SafeAreaProps> = ({ children, className }) => {
+export const CardGroup: React.FC<CardGroupProps> = ({ children, className }) => {
     return (
+        
         <div className={
             `
                 flex 
-                flex-grow 
-                min-h-full 
-                w-full
-                h-auto
-                p-5
+                flex-wrap 
+                justify-center 
+                transition-all 
+                h-auto 
+                
                 ${className || ''}
             `
         }

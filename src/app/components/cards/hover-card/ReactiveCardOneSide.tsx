@@ -7,8 +7,11 @@ interface ReactiveCardProps {
 const ReactiveCardOneSide: React.FC<ReactiveCardProps> = ({ children }) => {
     return (
         <>
+        <div className='container playing flex w-[300px] sm:w-[480px] h-[600px] border border-solid border-red transition-all'>
+
+            
             <div id='card' className="
-            bg-gradient-to-tr from-purple-800 to-bright-yarrow-700 
+            
             flex-grow 
             items-stretch 
             justify-center 
@@ -18,10 +21,21 @@ const ReactiveCardOneSide: React.FC<ReactiveCardProps> = ({ children }) => {
             border 
             border-5 
             border-green 
+            
+            
             ">
+            <div className="wave"></div>
+            <div className="wave"></div>
+            <div className="wave"></div>
+                
+                <div className='content scrollableContent'>
                 {children}
+                </div>
+                
+            </div>
             </div>
         </>
+
 
     )
 }

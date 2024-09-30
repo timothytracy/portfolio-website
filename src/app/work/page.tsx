@@ -1,6 +1,8 @@
 import React from 'react';
 import ExperienceCard from "../components/cards/experience-card/ExperienceCard";
 import TimeProgressBar from "../components/time-progress-bar/TimeProgressBar";
+import { ScrollableContentLayout } from '../components/ScrollableContentLayout';
+import { CardGroup } from '../components/cards/CardGroup';
 
 export default function Work() {
     const globalLongestTime = "2019-06-01";
@@ -30,10 +32,13 @@ export default function Work() {
             <p className="mb-8">
                 Here are some of my work experiences
             </p>
+            <ScrollableContentLayout>
+
+           
             
-            <div className="flex flex-wrap justify-center">
+            <CardGroup>
                 {cardData.map((card, index) => (
-                    <div key={index} className="w-[500px] h-[600px] border border-solid border-red">
+                    <div key={index} className="">
                         <ExperienceCard title={card.title} className="h-full">
                             {card.items.map((item, itemIndex) => (
                                 <div 
@@ -47,7 +52,8 @@ export default function Work() {
                         </ExperienceCard>
                     </div>
                 ))}
-            </div>
+            </CardGroup>
+            </ScrollableContentLayout>
         </div>
     );
 }
