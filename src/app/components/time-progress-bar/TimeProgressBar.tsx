@@ -20,7 +20,7 @@ const TimeProgressBar: React.FC<TimeProgressBarProps> = ({ startDate, longestTim
   const timeRef = useRef<HTMLParagraphElement>(null);
   const barRef = useRef<HTMLDivElement>(null);
 
-  const classProps = `absolute top-0 left-0 h-full ${tailwindColor || 'bg-gradient-to-r from-electron-blue-500 to-exodus-fruit-500 dark:bg-gradient-to-r dark:from-robins-egg-blue-600 dark:to-electron-blue-500'} rounded-full transition-all duration-500 ease-out flex items-center`
+  const classProps = `absolute top-0 left-0 h-full ${tailwindColor || 'bg-gradient-to-r from-electron-blue-500 to-exodus-fruit-400 dark:bg-gradient-to-r dark:from-robins-egg-blue-600 dark:to-electron-blue-300'} rounded-full transition-all duration-500 ease-out flex items-center shadow-wxl`
 
   const body = `${children ? `${children}` : ''}`
   const time = `${progress.years > 0 ? `${progress.years} year${progress.years !== 1 ? 's' : ''}, ` : ''}${progress.months} month${progress.months !== 1 ? 's' : ''}`
@@ -75,9 +75,9 @@ const TimeProgressBar: React.FC<TimeProgressBarProps> = ({ startDate, longestTim
           {body}
         </h6>
       </div>
-      <div ref={barRef} className="relative h-8 bg-gray-200 rounded-full overflow-hidden shadow-xl">
+      <div ref={barRef} className="relative h-8 bg-transparent rounded-full overflow-hidden ">
         <div 
-          className={classProps}
+          className={`${classProps} shadow-2xl`}
           style={{ width: `${Math.max(minWidth, progress.totalProgress)}%` }}
         >
           <p ref={timeRef} className='mx-2 text-white text-sm whitespace-nowrap'>{time}</p>

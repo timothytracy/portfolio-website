@@ -22,7 +22,7 @@
   
   #card:hover {
     cursor: pointer;
-    transform: scale(1.2);
+    transform: scale(1.05);
   }
   
   .scrollable-content {
@@ -88,7 +88,7 @@
   }
   
   .playing .wave:nth-child(2) {
-    animation-duration: 8000ms;
+    animation-duration: 20000ms;
   }
   
   .wave:nth-child(2) {

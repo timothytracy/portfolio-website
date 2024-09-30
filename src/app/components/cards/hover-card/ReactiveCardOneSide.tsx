@@ -7,20 +7,19 @@ interface ReactiveCardProps {
 const ReactiveCardOneSide: React.FC<ReactiveCardProps> = ({ children }) => {
     return (
         <>
-        <div className='container playing flex w-[300px] sm:w-[480px] h-[600px] border border-solid border-red transition-all'>
+        <div className='container playing flex w-[300px] sm:w-[480px] h-[600px] transition-all'>
 
             
             <div id='card' className="
-            
+            shadow-2xl 
             flex-grow 
             items-stretch 
             justify-center 
             items-middle 
             h-full  
             rounded-3xl 
-            border 
-            border-5 
-            border-green 
+            transition-all 
+            
             
             
             ">

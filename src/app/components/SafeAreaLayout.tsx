@@ -4,7 +4,7 @@ interface SafeAreaProps {
 }
 export const SafeAreaLayout: React.FC<SafeAreaProps> = ({ children, className }) => {
     return (
-        <div className={
+        <div id='safe-area' className={
             `
                 flex 
                 flex-grow 
