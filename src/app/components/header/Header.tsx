@@ -5,8 +5,8 @@ import { MdContactMail, MdWork } from "react-icons/md";
 
 const Header: React.FC = () => {
     return ( 
-        <div className='flex justify-center items-center bg-electron-blue-100  dark:bg-dracula-orchid-500  lg:min-h-screen lg:max-w-[100px]  h-16 lg:h-auto '>
-            <div className="flex lg:flex-col space-5">
+        <div className='flex justify-center items-center bg-electron-blue-100  dark:bg-dracula-orchid-500  lg:min-h-screen lg:max-w-[100px] lg:min-w-[75px]  h-16 lg:h-auto '>
+            <div className="flex lg:flex-col justify-center  align-middle items-center space-x-5 lg:space-x-0 lg:space-y-5 ">
                 <a href='/home'><HeaderButton ><FaHome size='30'/></HeaderButton></a>
                 <a href='/about'><HeaderButton><FaPerson size='30'/></HeaderButton></a>
                 <a href='/work'><HeaderButton><MdWork size='30'/></HeaderButton></a>

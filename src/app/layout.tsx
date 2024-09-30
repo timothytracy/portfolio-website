@@ -38,15 +38,17 @@ export default function RootLayout({
           flex 
           flex-col 
           lg:flex-row 
+          flex-grow 
           h-full 
          ">
           <Header></Header>
 
           <main className=" 
+            flex
             flex-grow 
             overflow-auto 
-             
-            h-full
+            w-full 
+            min-h-full 
             bg-gradient-to-r 
             from-robins-egg-blue-600 
             to-electron-blue-500 
