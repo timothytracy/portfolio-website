@@ -16,7 +16,7 @@ const Home = () => {
                 </div>
                 <div className='flex w-full h-1/3 lg:w-4/10 lg:h-full justify-center items-center '>
                     <div className="flex justify-center items-center ">
-                        <RotatingCubeArray dimension={3} />
+                        <RotatingCubeArray dimension={2} />
                     </div>
                 </div>
             </div>

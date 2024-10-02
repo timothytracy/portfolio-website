@@ -1,8 +1,8 @@
-interface SafeAreaProps {
+interface MainAreaProps {
     children: React.ReactNode;
     className?: string;
 }
-export const SafeAreaLayout: React.FC<SafeAreaProps> = ({ children, className }) => {
+export const MainAreaLayout: React.FC<MainAreaProps> = ({ children, className }) => {
     return (
         <div id='safe-area' className={
             `
@@ -11,7 +11,6 @@ export const SafeAreaLayout: React.FC<SafeAreaProps> = ({ children, className })
                 min-h-full 
                 w-full
                 h-auto
-              
                 
                 
                 ${className || ''}

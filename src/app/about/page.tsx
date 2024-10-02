@@ -1,6 +1,7 @@
 import React from 'react';
 import ExperienceCard from "../components/cards/experience-card/ExperienceCard";
 import TimeProgressBar from "../components/time-progress-bar/TimeProgressBar";
+import ReactiveCardOneSide from '../components/cards/hover-card/ReactiveCardOneSide';
 
 export default function About() {
     const globalLongestTime = "2019-06-01";
@@ -82,6 +83,8 @@ export default function About() {
                     <div key={index} className="">
                         <ExperienceCard title={card.title} className="h-full">
                             {card.items.map((item, itemIndex) => (
+                                <>
+                                
                                 <TimeProgressBar 
                                     key={itemIndex}
                                     startDate={item.startDate} 
@@ -89,6 +92,9 @@ export default function About() {
                                 >
                                     {item.name}
                                 </TimeProgressBar>
+                                
+                                </>
+                                
                             ))}
                         </ExperienceCard>
                     </div>

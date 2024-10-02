@@ -1,4 +1,5 @@
 import RotatingCubeArray from "../components/RotatingCubeArray";
+import { SafeAreaLayout } from "../components/SafeAreaLayout";
 
 import './../../app/globals.css'
 export default function AboutLayout({
@@ -8,6 +9,9 @@ export default function AboutLayout({
 }>) {
     return (
         <>
+        <SafeAreaLayout>
+
+        
 
         <div className="noScrollBar flex flex-col-reverse h-screen lg:flex-row">
             <div className="noScrollBar flex flex-col justify-start items-center h-2/3 w-full lg:w-2/4 lg:h-full md:overflow-scroll">
@@ -21,6 +25,7 @@ export default function AboutLayout({
                 </div>
             </div>
         </div>
+        </SafeAreaLayout>
 
 
         </>

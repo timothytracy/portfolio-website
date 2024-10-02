@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/header/Header";
 import { SafeAreaLayout } from "./components/SafeAreaLayout";
+import { MainAreaLayout } from "./components/MainAreaLayout";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -39,7 +40,8 @@ export default function RootLayout({
           flex 
           flex-col 
           lg:flex-row 
-          h-full 
+          h-full
+         
            
          ">
           <Header></Header>
@@ -47,7 +49,7 @@ export default function RootLayout({
           <main className=" 
             flex 
             w-full 
-            h-full
+            min-h-full
             overflow-auto 
             bg-gradient-to-r 
             from-robins-egg-blue-600 
@@ -56,9 +58,9 @@ export default function RootLayout({
             dark:from-electron-blue-500 
             dark:to-exodus-fruit-500 
             ">
-              <SafeAreaLayout>
+              <MainAreaLayout>
               {children}
-              </SafeAreaLayout>
+              </MainAreaLayout>
           </main>
         </div>
 
