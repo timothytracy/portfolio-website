@@ -89,9 +89,11 @@ const Header: React.FC<HeaderProps> & {
     );
 };
 
-Header.Title = ({ children, className = '' }: TitleProps) => (
+Header.Title = ({ children, className = '' }: TitleProps) => { 
+    Header.Title.displayName = 'Header.title'
+    return (
     <h4 className={`${className}`}>{children}</h4>
-);
+);}
 
 Header.Subtitle = ({ children, className = '' }: SubtitleProps) => (
     <p className={`text-sm text-gray-600 ${className}`}>{children}</p>

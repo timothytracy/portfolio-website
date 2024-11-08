@@ -37,30 +37,30 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="
-          flex 
-          flex-col 
+          flex  
+          flex-col  
           lg:flex-row 
-          h-full
+          w-full  
+          h-screen
          
            
          ">
           <Header></Header>
 
           <main className=" 
-            flex 
+            flex flex-col 
+            scrollbar
             w-full 
-            min-h-full
+            h-full
             overflow-auto 
-            bg-gradient-to-r 
-            from-robins-egg-blue-600 
-            to-electron-blue-500 
-            dark:bg-gradient-to-r 
-            dark:from-electron-blue-500 
-            dark:to-exodus-fruit-500 
+            bg-neutral-200
+            dark: bg-neutral-900
+            
+           
             ">
-              <MainAreaLayout>
+           
               {children}
-              </MainAreaLayout>
+          
           </main>
         </div>
 

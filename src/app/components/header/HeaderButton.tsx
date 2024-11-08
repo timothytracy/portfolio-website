@@ -11,7 +11,7 @@ const HeaderButton: React.FC<ButtonProps> = ({ children, ...props }) => {
   return (
     <div className="group relative">
       <button className='btn' {...props}>
-        <div className='inner text-electron-blue dark:text-green-darner-tail-400 '>
+        <div className='inner text-neutral-800 dark:text-neutral-200 '>
           {children}
         </div>
       </button>

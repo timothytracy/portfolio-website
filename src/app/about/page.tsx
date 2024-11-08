@@ -69,32 +69,35 @@ export default function About() {
     ];
 
     return (
-        <div className="">
-            <h1 className="text-3xl font-bold mb-8">About Me</h1>
-            
-            <p className="mb-8">
-                I am a well-rounded software engineer with a passion for web engineering. 
-                I have experience in object-oriented programming, functional programming, and web development.
-                Feel free to browse my programming experience.
-            </p>
-            
-            <div className="flex flex-wrap justify-center">
+        <div className="flex flex-col p-5 w-full h-full justify-center items-center space-y-10">
+            <div className='flex flex-col w-full md:w-3/4 lg:w-2/3 xl:w-1/2 justify-center p-5 md:py-5 border-4 border-neutral-700 dark:border-neutral-200 rounded-xl '>
+                <h1 className="text-3xl font-bold mb-8 text-center ">About Me</h1>
+
+                <p className="mb-8">
+                    I am a well-rounded software engineer with a passion for web engineering.
+                    I have experience in object-oriented programming, functional programming, and web development.
+                    Feel free to browse my programming experience.
+                </p>
+            </div>
+
+
+            <div className="flex flex-wrap justify-center lg:w-3/4 items-center fill-faded-poster-100">
                 {cardData.map((card, index) => (
                     <div key={index} className="">
                         <ExperienceCard title={card.title} className="h-full">
                             {card.items.map((item, itemIndex) => (
                                 <>
-                                
-                                <TimeProgressBar 
-                                    key={itemIndex}
-                                    startDate={item.startDate} 
-                                    longestTime={card.longestTime}
-                                >
-                                    {item.name}
-                                </TimeProgressBar>
-                                
+
+                                    <TimeProgressBar
+                                        key={itemIndex}
+                                        startDate={item.startDate}
+                                        longestTime={card.longestTime}
+                                    >
+                                        {item.name}
+                                    </TimeProgressBar>
+
                                 </>
-                                
+
                             ))}
                         </ExperienceCard>
                     </div>
