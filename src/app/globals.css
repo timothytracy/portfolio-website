@@ -248,9 +248,9 @@
   --explosion-distance: 200px;
   --explosion-rotation: 720deg;
   @screen lg{
-    --cube-size: 70px;
-    --explosion-distance: 800px;
-    --explosion-rotation: 1440deg;
+    --cube-size: 50px;
+    --explosion-distance: 200px;
+    --explosion-rotation: 360deg;
   }
   /* ROTATING CUBE ARRAY VARIABLES*/
   

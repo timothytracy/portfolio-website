@@ -81,7 +81,7 @@ export default function About() {
             </div>
 
 
-            <div className="flex flex-wrap justify-center lg:w-3/4 items-center fill-faded-poster-100">
+            <div className="flex flex-row justify-center lg:w-3/4 items-center fill-faded-poster-100 overflow-x-scroll">
                 {cardData.map((card, index) => (
                     <div key={index} className="">
                         <ExperienceCard title={card.title} className="h-full">

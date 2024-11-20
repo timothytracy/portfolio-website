@@ -51,7 +51,7 @@ const ReactiveCardOneSide: React.FC<CardProps> & CardComposition = ({ children }
     );
 
     return (
-        <div className='container playing flex w-[300px] h-[400px] sm:w-[400px] sm:h-[550px] transition-all'>
+        <div className='container playing flex flex-grow w-[100%] transition-all'>
             <div id='card' className="
                 shadow-2xl 
                 flex-grow 
@@ -83,7 +83,7 @@ const Header: React.FC<HeaderProps> & {
     Actions: React.FC<ActionsProps>;
 } = ({ children, className = '' }) => {
     return (
-        <div className={`card-header p-4 sm:min-h-[20%]  ${className}`}>
+        <div className={`card-header px-4 py-2 ${className}`}>
             {children}
         </div>
     );
@@ -92,7 +92,7 @@ const Header: React.FC<HeaderProps> & {
 Header.Title = ({ children, className = '' }: TitleProps) => { 
     Header.Title.displayName = 'Header.title'
     return (
-    <h4 className={`${className}`}>{children}</h4>
+    <h6 className={`${className}`}>{children}</h6>
 );}
 
 Header.Subtitle = ({ children, className = '' }: SubtitleProps) => (

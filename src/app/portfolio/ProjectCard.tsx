@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import { Button } from "@/components/ui/button";
 import React, { ReactNode } from "react";
 
@@ -55,9 +56,7 @@ const ProjectCard: React.FC<CardProps> & CardComposition = ({ children }) => {
     );
 
     return (
-        <div className='w-full bg-gradient-to-br 
-            from-cyan-700
-            to-indigo-800 p-5 rounded-2xl shadow-xl'>
+        <div className='w-full p-1 rounded-2xl '>
             {header || <></>}
             {body || children}
             {footer || <></>}
@@ -81,7 +80,7 @@ const Header: React.FC<HeaderProps> & {
 Header.Title = ({ children, className = '' }: TitleProps) => { 
     Header.Title.displayName = 'Header.Title'
     return (
-    <h4 className={`${className}`}>{children}</h4>
+    <p className={`text-2xl ${className}`}>{children}</p>
 );}
 
 Header.Subtitle = ({ children, className = '' }: SubtitleProps) => {
@@ -116,7 +115,7 @@ ProjectCard.Body.displayName='ReactiveCardOneSide.Body'
 
 
  ProjectCard.Footer = ({ children, className = '' }: FooterProps) => (
-    <div className={`flex w-full justify-center pt-5 ${className}`}>
+    <div className={`flex w-full justify-center p-5 ${className}`}>
         {children}
     </div>
 );

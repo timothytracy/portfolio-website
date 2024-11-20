@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/header/Header";
 import { SafeAreaLayout } from "./components/SafeAreaLayout";
 import { MainAreaLayout } from "./components/MainAreaLayout";
+import Welcome from "./Welcome";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -33,36 +34,24 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='' />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <div className="
-          flex  
-          flex-col  
-          lg:flex-row 
-          w-full  
-          h-screen
-         
-           
-         ">
-          <Header></Header>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-neutral-200 dark:bg-neutral-900`}>
 
-          <main className=" 
-            flex flex-col 
-            scrollbar
-            w-full 
-            h-full
-            overflow-auto 
-            bg-neutral-200
-            dark: bg-neutral-900
+          <div className="flex flex-col md:flex-row w-full h-full min-h-full bg-neutral-200 dark:bg-neutral-900 overflow-visible md:overflow-clip ">
+      
+              <div className="w-screen md:w-1/2 flex flex-col h-full ">
+                <Welcome></Welcome>
+
+              </div>
+              <div className='w-screen md:w-1/2 flex flex-col h-screen md:overflow-clip'>
+                {children}
+              </div>
+
             
-           
-            ">
-           
-              {children}
-          
-          </main>
-        </div>
+
+
+
+          </div>
+        
 
       </body>
     </html>

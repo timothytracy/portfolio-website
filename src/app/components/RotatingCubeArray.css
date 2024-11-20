@@ -6,12 +6,12 @@
     --scene-width: auto;
     --scene-height: auto;
     --explosion-speed: 4s;
-    --color-wave-speed: 5s;
+    --color-wave-speed: 3s;
     --flash-speed: 0.5s;
     
     
-    --cube-color: rgba(255, 255, 255, 0.8);
-    --cube-border-color: rgba(0, 0, 0, 0.1);
+    --cube-color: rgba(255, 255, 255, 0.0);
+    --cube-border-color: rgba(255, 255, 255, 0.1);
     --hover-color: #ef4149;
     --color-1: rgba(255, 0, 0, 0.8);
     --color-2: rgba(255, 255, 0, 0.8);
@@ -78,8 +78,8 @@
     width: var(--cube-size);
     height: var(--cube-size);
     background: var(--cube-color);
-    border: 1px solid var(--cube-border-color);
-    transition: all 0.3s;
+    border: 2px solid var(--cube-border-color);
+    transition: all 0.1s;
   }
 
   .exploded .face {

@@ -69,13 +69,13 @@ const TimeProgressBar: React.FC<TimeProgressBarProps> = ({ startDate, longestTim
   }, [progress, time]);
 
   return (
-    <div className="w-full antialiased">
+    <div className="w-full antialiased ">
       <div className="mb-1">
-        <h6 className="text-wrap break-words">
+        <p className="text-wrap break-words">
           {body}
-        </h6>
+        </p>
       </div>
-      <div ref={barRef} className="relative h-8 bg-transparent rounded-full overflow-hidden ">
+      <div ref={barRef} className="relative h-6 bg-transparent rounded-full overflow-hidden ">
         <div 
           className={`${classProps} shadow-2xl`}
           style={{ width: `${Math.max(minWidth, progress.totalProgress)}%` }}
