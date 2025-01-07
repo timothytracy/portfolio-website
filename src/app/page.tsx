@@ -1,17 +1,23 @@
-import About from "./About";
-import ExperienceGraph from "./components/graph/ExperienceGraph";
-import Portfolio from "./Portfolio";
-import Welcome from "./Welcome";
+import ProjectShowcase from "./ProjectCard";
 
 export default function Home() {
   return (
-    <div className="flex flex-col md:overflow-scroll bg-neutral-200 dark:bg-neutral-900">
-      <About></About>
-      <Portfolio></Portfolio> 
-
+    <div className="flex flex-col  w-full bg-neutral-200 dark:bg-neutral-900">
+      <p className="p-6">
+        With five years of coding experience and a foundation in computer science fundamentals, I&apos;ve found my true calling in web engineering. What drives me is the web&apos;s incredible power to reach anyone, anywhere - where a single URL can connect your creation to millions of users worldwide.
+        <br /><br />
+        Currently, I&apos;m working as a Software Engineer Intern at Cardinal Security, where I develop API clients and collectors using Go. This role allows me to contribute to expanding the platform&apos;s capabilities while gaining hands-on experience with enterprise-level software development.        {/* As a full-stack developer, I thrive on building complete digital experiences from the ground up. My journey began with data structures and algorithms, giving me a strong theoretical foundation. Today, I channel that knowledge into crafting accessible, universal web solutions that span frontend interfaces, backend systems, and database architectures. */}
+        <br /><br />
+        I&apos;m completing my undergraduate degree in Computer Science at California State University Northridge, expecting to graduate in May 2025. My academic journey has equipped me with strong theoretical foundations while my practical experience has allowed me to apply these principles to real-world challenges.
+        <br /><br />
+        I believe in the democratizing power of the web - where innovative ideas can reach users regardless of their device or platform. Every project I take on is driven by this vision: creating solutions that are not just technically sound, but universally accessible to anyone with a browser.
+        </p>
+<ProjectShowcase></ProjectShowcase>     
       
-    
+
+
+
     </div>
-   
+
   );
 }
