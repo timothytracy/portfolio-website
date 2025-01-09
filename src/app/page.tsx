@@ -6,7 +6,7 @@ import WorkShowcase from "./WorkCard";
 
 export default function Home() {
   return (
-    <div className="flex flex-col py-20  w-full text-neutral-400">
+    <div className="flex flex-col h-full  w-full text-neutral-400 ">
       <p className="py-4 lg:p-6">
         With five years of coding experience and a foundation in computer science fundamentals, I&apos;ve found my true calling in web engineering. What drives me is the web&apos;s incredible power to reach anyone, anywhere - where a single URL can connect your creation to millions of users worldwide.
         <br /><br />
@@ -20,7 +20,7 @@ export default function Home() {
       <Separator className="my-4 " />
 
       <WorkShowcase></WorkShowcase>
-      
+
       <Separator className="my-4 " />
 
       <ProjectShowcase></ProjectShowcase>        

@@ -24,20 +24,22 @@ export default function RootLayout({
     <html lang="en">
       <head>
       </head>
-      <body className={`${montserrat.className} antialiased bg-neutral-900 lg:overflow-clip`}>
-      <main className={montserrat.className}>
+      <body className={`${montserrat.className} antialiased bg-neutral-900 overflow-scroll lg:overflow-clip`}>
+      <main className={`${montserrat.className} `}>
       <Analytics/>
       <SpeedInsights/>
-        <div className="flex flex-col md:flex-row w-full h-full min-h-full justify-center bg-neutral-900 overflow-clip">
-          <div className="lg:flex max-w-[1400px] ">
-            <div className="flex flex-col w-full h-[500px] lg:w-2/5 lg:min-w-[500px] lg:h-full ">
+      <div className="flex h-screen w-screen items-center justify-center">
+        <div className="flex flex-col lg:flex-row w-full h-full min-h-full bg-neutral-900  max-w-[1400px]">
+          
+            <div className="flex flex-col w-full h-full max-h-screen lg:w-2/5 lg:min-w-[500px] lg:h-screen ">
               <Bio></Bio>
             </div>
-            <div className='flex flex-col px-8 lg:h-screen lg:w-3/5 overflow-scroll'>
+            <div className='flex flex-col px-8 lg:h-screen lg:w-3/5 lg:overflow-scroll'>
               {children}
               
             </div>
-          </div>
+          
+        </div>
         </div>
         </main>
       </body>

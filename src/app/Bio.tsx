@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Bio:React.FC = () => {
     return (
-            <div className="flex flex-col h-screen px-5 py-24">
+            <div className="flex flex-col lg:h-screen px-5 py-10 lg:py-24">
                 <div className="flex flex-col  h-3/4  ">
                     <div className="flex flex-col h-1/2 justify-center p-4">
                         <h1 className='text-3xl lg:text-4xl'>
