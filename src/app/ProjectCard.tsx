@@ -1,6 +1,7 @@
 import React from 'react';
-import { ArrowUpRight, Star } from 'lucide-react';
+import { ArrowUpRight} from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface ProjectCardProps {
   readonly project: {
@@ -10,18 +11,20 @@ interface ProjectCardProps {
     readonly stars: number;
     readonly technologies: readonly string[];
     readonly link?: string;
-  };
+  },
+    children?:React.ReactNode;
 }
 
 // Sample project data
 const SAMPLE_PROJECTS = [
+    
   {
     title: "6Degrees",
     description: "6Degrees revolutionizes social media by visualizing the real-time journey of your content across networks. Unlike traditional platforms, 6Degrees lets you track every share and interaction through a stunning distribution graph, showing exactly how your posts connect people around the world. ",
     image: "/6degrees.jpg",
     stars: 670,
     technologies: ["Next.js","React", "Express", "Neo4j", "TypeScript"],
-    link: "https://spotify-profile.example.com"
+    link: "https://6degrees.app/posts/bright-inexpensive-salesmen?source_sharenode_username=timtracy5275"
   },
   {
     title: "Chronoflow (In Progress)",
@@ -29,13 +32,13 @@ const SAMPLE_PROJECTS = [
     image: "/chronoflow.jpg",
     stars: 432,
     technologies: ["Next.js","React", "Express", "PostgreSQL","Prisma ORM", "TypeScript"],
-    link: "https://github-dashboard.example.com"
+    link: "https://chronoflow.co"
   }
 ] as const;
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ project, children }) => {
   return (
-    <div className="w-full max-w-4xl  rounded-lg p-6 flex gap-6">
+    <div className="w-full max-w-4xl  rounded-lg p-6 flex flex-col md:flex-row gap-6">
       {/* Project Image */}
       <div className="w-64 h-48 flex-shrink-0">
         <Image 
@@ -51,12 +54,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       {/* Content */}
       <div className="flex-1 flex flex-col">
         {/* Title Row */}
+        <Link href={project.link || ""} target="_blank" rel="noopener noreferrer">
         <div className="flex items-center gap-2 mb-3">
           <h2 className="text-2xl font-semibold text-white">
             {project.title}
           </h2>
           <ArrowUpRight className="w-5 h-5 text-slate-400" />
+          
         </div>
+        </Link>
 
         {/* Description */}
         <p className="text-neutral-400 mb-6 flex-grow">
@@ -65,8 +71,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
         {/* Stars */}
         <div className="flex items-center gap-2 mb-4">
-          <Star className="w-5 h-5 text-white fill-white" />
-          <span className="text-white">{project.stars}</span>
+          {children}
         </div>
 
         {/* Technologies */}
@@ -88,9 +93,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 // Demo component to show all projects
 const ProjectShowcase: React.FC = () => {
   return (
-    <div className="flex flex-col gap-6 p-6  min-h-screen">
+    <div id="projects" className="flex flex-col gap-6 p-6  min-h-screen">
       {SAMPLE_PROJECTS.map((project, index) => (
         <ProjectCard key={index} project={project} />
+
       ))}
     </div>
   );

@@ -3,8 +3,54 @@
 @tailwind utilities;
 
 :root {
+  --background: 0 0% 0%;
+  --foreground: 0 0% 98%;
+
+  --card: 240 10% 3.9%;
+
+  --card-foreground: 0 0% 98%;
+
+  --popover: 240 10% 3.9%;
+
+  --popover-foreground: 0 0% 98%;
+
+  --primary: 0 0% 98%;
+
+  --primary-foreground: 240 5.9% 10%;
+
+  --secondary: 240 3.7% 15.9%;
+
+  --secondary-foreground: 0 0% 98%;
+
+  --muted: 240 3.7% 15.9%;
+
+  --muted-foreground: 240 5% 64.9%;
+
+  --accent: 240 3.7% 15.9%;
+
+  --accent-foreground: 0 0% 98%;
+
+  --destructive: 0 62.8% 30.6%;
+
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 240 3.7% 15.9%;
+
+  --input: 240 3.7% 15.9%;
+
+  --ring: 240 4.9% 83.9%;
+
+  --chart-1: 220 70% 50%;
+
+  --chart-2: 160 60% 45%;
+
+  --chart-3: 30 80% 55%;
+
+  --chart-4: 280 65% 60%;
+
+  --chart-5: 340 75% 55%;
  
-  --background: 0 0% 100%;
+  /* --background: 0 0% 100%;
  
     --foreground: 240 10% 3.9%;
  
@@ -50,7 +96,7 @@
  
     --chart-4: 43 74% 66%;
  
-    --chart-5: 27 87% 67%;
+    --chart-5: 27 87% 67%; */
  
     --radius: 0.5rem;
 
@@ -248,7 +294,7 @@
   --explosion-distance: 200px;
   --explosion-rotation: 720deg;
   @screen lg{
-    --cube-size: 50px;
+    --cube-size: 40px;
     --explosion-distance: 200px;
     --explosion-rotation: 360deg;
   }
@@ -312,7 +358,7 @@
 
 @layer base {
   h1, h2, h3, h4, h5, h6, p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-montserrat), sans-serif;
   }
 
   h1 {
@@ -425,45 +471,6 @@
   }
 }
 
-@screen lg{
-  
-
-}
-
-
-.noScrollBar {
-  scrollbar-width: none;  /* Firefox */
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-}
-
-.noScrollBar::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-  display: none;  /* Safari and Chrome */
-}
-
-@layer utilities {
-  .scrollbar::-webkit-scrollbar {
-    
-    width: 10px;
-    height: 20px;
-  }
-
-  .scrollbar::-webkit-scrollbar-track {
-    border-radius: 100vh;
-    background: transparent;
-  }
-
-  .scrollbar::-webkit-scrollbar-thumb {
-    background: var(--dracula-orchid-200);
-    border-radius: 100vh;
-    //border: 3px solid #f6f7ed;
-  }
-
-  .scrollbar::-webkit-scrollbar-thumb:hover {
-    background: var(--dracula-orchid-300);
-  }
-}
 
 @layer base {
   * {
